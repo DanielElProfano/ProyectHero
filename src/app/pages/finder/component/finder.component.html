@@ -1,0 +1,7 @@
+<app-sticker [heroesSon]="hero"
+            (emmitHero)="getHeroDetails($event)"></app-sticker>
+
+<app-modal [(showModal)]="showModal" 
+            [hero] = "heroDetail">
+   
+</app-modal>

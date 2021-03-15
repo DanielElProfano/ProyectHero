@@ -1,0 +1,18 @@
+@import '../settings/color.settings';
+
+.b-text{
+
+    font-size: 0.9rem;
+
+    color: $color-text-primary;
+
+    &__cardName{
+        font-weight: bold;
+        color: $color-white;
+    }
+    &__cardDescription{
+        color: $color-text-menu;
+    }
+
+
+}

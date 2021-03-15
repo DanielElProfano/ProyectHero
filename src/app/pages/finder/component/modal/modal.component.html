@@ -1,0 +1,66 @@
+
+<div
+    class="generic-modal-wrapper"
+    [ngClass]="{ 'generic-modal-wrapper--opened': showModal }"
+  >
+    <div class="generic-modal-window">
+      <div class="generic-modal-window-header">
+       
+        <span class="generic-modal-window-icon" (click)="closeShowModal()">
+        </span>  
+                <div class="generic-modal-window-title">
+                  Details of: {{hero!.name}}
+          <ng-content select=".modal-header"></ng-content>
+        </div>
+      </div>
+      <div class="generic-modal-window-message">
+        <!-- <app-graphics [powerStats]="showModal.heroDetail.powerstats"></app-graphics> -->
+        <div class="generic-modal-window-details">
+          <div style="display: block;">
+            <canvas baseChart
+              [datasets]="radarChartData"
+              [options]="radarChartOptions"
+              [labels]="radarChartLabels"
+              [chartType]="radarChartType">
+            </canvas>
+          </div>
+          
+            <div class="b-detail" *ngIf="hero" >
+              <div class="b-detail__header">
+               <!--  <img class="b-detail__img" src="{{hero.image.url}}" alt="image of {{hero.name}}"> -->
+                <div class="b-detail__hero">
+                  <!-- <p class="b-text__cardDescription">Full name: <span class="b-text">{{hero!.biography.fullName}}</span></p> -->
+                  <p class="b-text__cardDescription">Alignment: <span class="b-text">{{hero!.biography!.alignment!}}</span></p>
+                  <p class="b-text__cardDescription">Race: <span class="b-text">{{hero!.appearance!.race}}</span></p>
+                  <p class="b-text__cardDescription">Height: <span class="b-text">{{hero!.appearance!.height}}</span></p>
+                  <p class="b-text__cardDescription">Weight: <span class="b-text">{{hero!.appearance!.weight}}</span></p>
+                  <p class="b-text__cardDescription">Gender: <span class="b-text">{{hero!.appearance!.gender}}</span> </p>
+               
+                </div>
+              </div>
+              <p class="b-detail__border">            </p>
+              <div class="b-detail__body">
+                 <p class="b-text__cardDescription">Alter Ego: <span class="b-text">{{hero.biography.alterEgo}}</span></p> 
+                <p class="b-text__cardDescription">Aliases: <span class="b-text">{{hero.biography.aliases}}</span></p>
+                <p class="b-text__cardDescription">Publisher: <span class="b-text">{{hero.biography.publisher}}</span></p>
+                <p class="b-text__cardDescription">Occupation: <span class="b-text">{{hero.work.occupation}}</span> </p>
+                <p class="b-text__cardDescription">Base: <span class="b-text">{{hero.work.base}}</span></p>
+                <p class="b-text__cardDescription">Relatives: <span class="b-text">{{hero.connections.relatives}}</span></p>
+            
+
+
+              </div>
+
+            </div>
+         
+
+
+
+        </div>
+        <button class="b-detail__button" role="button" routerLink="/home">Volver al listado</button>
+        <ng-content select=".modal-body"></ng-content>
+      </div>
+    </div>
+  </div>
+  
+  

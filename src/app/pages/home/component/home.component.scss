@@ -1,0 +1,12 @@
+.b-home{
+
+    &__swiper{
+
+        width: 200px,
+    }
+
+    &__img{
+        object-fit: cover;
+        object-position: center center;
+    }
+}

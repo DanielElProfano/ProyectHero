@@ -1,0 +1,10 @@
+
+<div class="b-finder">
+    <div class="b-card" *ngFor="let heroSon of heroesSon">
+        <img id="{{ heroSon.id }}" class="b-card__img" src="{{heroSon.image.url}}" (click)="sendIdHero($event)" alt="image of {{heroSon.name}}" style="width:100%">
+        <div class="b-card__container">
+            <h4 class="b-text__cardName b-card__background">{{heroSon.name}}</h4>
+            <p class="b-text b-card__description">{{heroSon.biography.alignment}} & {{heroSon.appearance.race}}</p>
+        </div>
+  </div>
+</div>

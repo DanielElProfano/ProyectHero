@@ -1,0 +1,27 @@
+@import '../settings/color.settings';
+
+.b-card {
+    width: 40%;
+    box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    padding:0.5rem;
+    margin-bottom: 1rem;
+    
+ 
+  
+  /* Add rounded corners to the top left and the top right corner of the image */
+     &__img {
+        border-radius: 5px 5px 0 0;
+        cursor: pointer;
+        
+     }
+     &__container{
+        
+    }
+    &__background{
+        background-color: $color-background;
+        text-align: center;
+    }
+}
+

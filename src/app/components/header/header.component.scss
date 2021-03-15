@@ -1,0 +1,23 @@
+@import '../../../assets/styles/settings/color.settings';
+
+
+.b-text__main{
+
+    color: $color-text-title;
+
+}
+
+.b-header{
+
+    &__menu{
+        display:flex;
+        
+    }
+    &__navOptions{
+        
+        list-style: none;
+        margin:1rem;
+        color: $color-text-menu;
+        font-size: 1.3rem;
+    }
+}
